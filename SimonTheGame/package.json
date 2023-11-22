@@ -1,0 +1,13 @@
+{
+  "name": "SimonTheGame",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "dependencies": {
+    "vue": "^2.7.15"
+  }
+}
