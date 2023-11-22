@@ -1,0 +1,26 @@
+{
+  "parser": "vue-eslint-parser",
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "plugin:vue/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2022
+  },
+  "env": {
+    "node": true,
+    "es2022": true
+  },
+  "rules": {
+    "arrow-parens": ["error", "always"],
+    "prefer-destructuring": ["error"],
+    "indent": ["error", 4],
+    "lines-between-class-members": ["error", "always"],
+
+    "vue/multi-word-component-names": "off",
+    "vue/no-unused-vars": ["error", {"ignorePattern": "^_"}],
+
+    "max-len": 0
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "validations.required": "Требуется",
+  "invalidPhone": "Должен начинаться с 7 и иметь 11 цифр"
+}
