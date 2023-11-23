@@ -156,7 +156,7 @@ $errorColor: #f57f6c;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 1500px;
-  margin: 5% auto;
+  margin: 2% auto;
   justify-content: center;
   padding: 0 10%;
 
@@ -179,7 +179,13 @@ $errorColor: #f57f6c;
     }
   }
 }
-
+.category {
+  h3 {
+    text-align: center;
+    margin-bottom: 3%;
+  }
+  margin-bottom: 4%;
+}
 .field {
   list-style: none;
   padding: 0 2%;
