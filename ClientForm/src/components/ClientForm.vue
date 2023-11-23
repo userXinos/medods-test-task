@@ -25,9 +25,8 @@
             <label class="label"> {{ field.loc }} {{ field.req ? '*' : '' }}</label>
 
             <select
-              v-if="field.type === 'selector' || field.type === 'multi-selector'"
+              v-if="field.type === 'selector'"
               v-model="v$[field.id].$model"
-              :multiple="field.type === 'multi-selector'"
             >
               <option
                 v-for="(child, j) in field.children"
@@ -36,6 +35,22 @@
                 {{ child }}
               </option>
             </select>
+
+            <form v-else-if="field.type === 'multi-selector'">
+              <template v-for="(child, j) in field.children">
+                <input
+                  :id="child"
+                  :key="child"
+                  v-model="v$[field.id].$model"
+                  :value="child"
+                  type="checkbox"
+                >
+                <label
+                  :key="j"
+                  for="jack"
+                >{{ child }}</label>
+              </template>
+            </form>
 
             <input
               v-else
@@ -87,9 +102,7 @@ import {required} from '@/utils/i18n-validators';
 
 import fieldStructure from '@/fieldStructure';
 
-/**
- * @type Record<string, {id: string, type: string, loc: string, req?: boolean, children?: string[], min?: number, validator?: function}>
- */
+/** @type Record<string, {id: string, type: string, loc: string, req?: boolean, children?: string[], min?: number, validator?: function}> */
 const allFields = Object.values(fieldStructure).reduce((acc, category) => ({
     ...acc,
     ...category.children.reduce((acc, field) => ({
@@ -190,9 +203,12 @@ $errorColor: #f57f6c;
     width: 15px;
     height: 15px;
   }
-  select[multiple] {
-    height: 100%;
-    padding: 10px;
+  form {
+    margin-top: 5px;
+
+    input {
+      margin: 0 10px;
+    }
   }
 
   .errors {
