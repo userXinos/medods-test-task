@@ -24,6 +24,13 @@
           >
             <label class="label"> {{ field.loc }} {{ field.req ? '*' : '' }}</label>
 
+            <span
+              v-if="v$[field.id].$errors.length"
+              class="errors"
+            >
+              <span>   {{ v$[field.id].$errors[0].$message }}</span>
+            </span>
+
             <select
               v-if="field.type === 'selector'"
               v-model="v$[field.id].$model"
@@ -58,16 +65,6 @@
               :type="field.type"
               class="field-input"
             >
-
-
-            <div class="errors">
-              <div
-                v-if="v$[field.id].$errors.length"
-                class="error-msg"
-              >
-                <span>{{ v$[field.id].$errors[0].$message }}</span>
-              </div>
-            </div>
           </li>
         </ul>
       </div>
@@ -185,8 +182,8 @@ $errorColor: #f57f6c;
 
 .field {
   list-style: none;
-  padding: 2%;
-  margin-bottom: 2%;
+  padding: 0 2%;
+  margin-bottom: 1%;
 
   label {
     font-size: 80%;
@@ -212,9 +209,11 @@ $errorColor: #f57f6c;
   }
 
   .errors {
-    position: absolute;
     font-size: 70%;
-    margin-top: 2px;
+
+    &::before {
+      padding-left: 10px;
+    }
   }
 }
 .has-error {
