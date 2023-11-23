@@ -1,6 +1,6 @@
 # ClientForm
 
-[Тех задание](/тз.txt)
+[Тех задание](/ClientForm/тз.txt)
 
 deploy: [https://userxinos.github.io/medods-test-task/ClientForm/](https://userxinos.github.io/medods-test-task/ClientForm/)
 

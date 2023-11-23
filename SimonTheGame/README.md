@@ -1,6 +1,6 @@
 # SimonTheGame
 
-[Тех задание](/тз.txt)
+[Тех задание](/SimonTheGame/тз.txt)
 
 deploy: [https://userxinos.github.io/medods-test-task/SimonTheGame/](https://userxinos.github.io/medods-test-task/SimonTheGame/)
 
