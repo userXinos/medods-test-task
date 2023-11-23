@@ -1,4 +1,8 @@
-# hello-world
+# SimonTheGame
+
+[Тех задание](/тз.txt)
+
+deploy: [https://userxinos.github.io/medods-test-task/SimonTheGame/](https://userxinos.github.io/medods-test-task/SimonTheGame/)
 
 ## Project setup
 ```
@@ -14,11 +18,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
